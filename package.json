@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-require-node-import-prefix",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "pashak09",
   "description": "A rule that enforces to use the `node:` prefix for nodejs built-ins",
   "license": "MIT",

@@ -32,6 +32,8 @@ export const rule: Rule.RuleModule = {
             context.report({
               node: source,
               messageId: 'invalidBuiltInImport',
+              fix: (fixer: Rule.RuleFixer): Rule.Fix =>
+                fixer.replaceText(source, `'node:${moduleName}'`),
               data: {
                 moduleName,
               },

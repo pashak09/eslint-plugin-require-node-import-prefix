@@ -22,6 +22,7 @@ ruleTester.run('no-empty-import-prefix', rule, {
   invalid: [
     {
       code: "import { builtinModules } from 'module';",
+      output: "import { builtinModules } from 'node:module';",
       errors: [
         {
           messageId: 'invalidBuiltInImport',
@@ -33,6 +34,7 @@ ruleTester.run('no-empty-import-prefix', rule, {
     },
     {
       code: "import fs from 'fs'",
+      output: "import fs from 'node:fs'",
       errors: [
         {
           messageId: 'invalidBuiltInImport',
